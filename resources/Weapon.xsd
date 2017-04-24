@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.epam.com/training/Weapon" 
+	xmlns:tns="http://www.epam.com/training/Weapon" 
+	elementFormDefault="qualified"
+	attributeFormDefault="qualified">
+	
+	<complexType name="SwordType">
+		<complexContent>
+			<extension base="tns:WeaponType">
+				<sequence>
+					<element name="material" type="string" />
+					<element name="weight" type="double" />
+					<element name="length" type="double" />
+					<element name="blade_thickness" type="double" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="MaceType">
+		<complexContent>
+			<extension base="tns:WeaponType">
+				<sequence>
+					<element name="size" type="double" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="AxeType">
+		<complexContent>
+			<extension base="tns:WeaponType">
+				<sequence>
+					<element name="blade_type" type="string" />
+					<element name="handle_type" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="BowType">
+		<complexContent>
+			<extension base="tns:WeaponType">
+				<sequence>
+					<element name="size" type="double" />
+					<element name="arrow_type" type="string" />
+					<element name="arrow_count" type="int" />
+				</sequence>
+				<attribute name="id" type="int" />
+				</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="WeaponType">
+		<sequence>
+			<element name="title" type="string" />
+			<element name="type" type="string" />
+			<element name="price" type="double" />
+			<element name="damage" type="int" />
+		</sequence>
+	</complexType>
+	
+</schema>

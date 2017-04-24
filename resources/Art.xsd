@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.epam.com/training/Art" 
+	xmlns:tns="http://www.epam.com/training/Art" 
+	elementFormDefault="qualified"
+	attributeFormDefault="qualified">
+	
+	<complexType name="VaseType">
+		<complexContent>
+			<extension base="tns:ArtType">
+				<sequence>
+					<element name="volume" type="double" />
+					<element name="picture" type="boolean" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="StatueType">
+		<complexContent>
+			<extension base="tns:ArtType">
+				<sequence>
+					<element name="weight" type="double" />
+					<element name="size" type="double" />
+					<element name="creation_date" type="gYear" />
+					<element name="master" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="PictureType">
+		<complexContent>
+			<extension base="tns:ArtType">
+				<sequence>
+					<element name="creation_date" type="gYear" />
+					<element name="master" type="string" />
+					<element name="quality" type="int" />
+					<element name="paint_type" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="StaffType">
+		<complexContent>
+			<extension base="tns:ArtType">
+				<sequence>
+					<element name="length" type="double" />
+					<element name="tip_type" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="ArtType">
+		<sequence>
+			<element name="title" type="string" />
+			<element name="type" type="string" />
+			<element name="price" type="double" />
+		</sequence>
+	</complexType>
+</schema>

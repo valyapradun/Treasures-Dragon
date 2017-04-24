@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.epam.com/training/Clothes"
+	xmlns:tns="http://www.epam.com/training/Clothes" 
+	elementFormDefault="qualified"
+	attributeFormDefault="qualified">
+	
+	<complexType name="HelmetType">
+		<complexContent>
+			<extension base="tns:ClothesType">
+				<sequence>
+			 		<element name="head_protection" type="double" />
+					<element name="head_girth" type="double" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="SpauldersType">
+		<complexContent>
+			<extension base="tns:ClothesType">
+				<sequence>
+			 		<element name="body_protection" type="double" />
+					<element name="shoulder_girth" type="double" />
+				</sequence>
+			<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="ArmorType">
+		<complexContent>
+			<extension base="tns:ClothesType">
+				<sequence>
+					<element name="body_protection" type="double" />
+					<element name="body_girth" type="double" />
+					<element name="picture" type="boolean" />
+				</sequence>
+			<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="PantsType">
+		<complexContent>
+			<extension base="tns:ClothesType">
+				<sequence>
+					<element name="leg_protection" type="boolean" />
+					<element name="leg_girth" type="double"/>
+				</sequence>
+			<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="BootsType">
+		<complexContent>
+			<extension base="tns:ClothesType">
+				<sequence>
+					<element name="leg_protection" type="boolean" />
+					<element name="foot_girth" type="double" />
+				</sequence>
+				<attribute name="id" type="int" />
+				</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="ClothesType">
+		<sequence>
+			<element name="title" type="string" />
+			<element name="material" type="string" />
+			<element name="type" type="string" />
+			<element name="price" type="double" />
+		</sequence>
+	</complexType>
+
+</schema>

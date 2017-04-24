@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.epam.com/training/Person" 
+	xmlns:tns="http://www.epam.com/training/Person" 
+	elementFormDefault="qualified"
+	attributeFormDefault="qualified">
+	
+	<complexType name="PersonType">
+		<sequence>
+			<element name="name" type="string" />
+			<element name="age" type="int" />
+			<element name="damnation" type="boolean" />
+			<element name="birthplace" type="string" />
+		</sequence>
+		<attribute name="id" type="int" />
+	</complexType>	
+</schema>

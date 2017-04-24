@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.epam.com/training/Jewelry" 
+	xmlns:tns="http://www.epam.com/training/Jewelry" 
+	elementFormDefault="qualified"
+	attributeFormDefault="qualified">
+
+	<complexType name="JewelType">
+		<complexContent>
+			<extension base="tns:JewelryType">
+				<sequence>
+					<element name="type" type="string" />
+					<element name="diameter" type="double" />
+				</sequence>
+			<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="RingType">
+		<complexContent>
+			<extension base="tns:JewelryType">
+				<sequence>
+					<element name="style" type="string" />
+					<element name="precious_stone" type="boolean" />
+				</sequence>
+			<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="BraceletType">
+		<complexContent>
+			<extension base="tns:JewelryType">
+				<sequence>
+					<element name="style" type="string" />
+					<element name="girth" type="double" />
+					<element name="rigidity" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+				</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="ChainType">
+		<complexContent>
+			<extension base="tns:JewelryType">
+				<sequence>
+					<element name="length" type="double" />
+					<element name="thickness" type="double" />
+					<element name="type_lock" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="SandGlassType">
+		<complexContent>
+			<extension base="tns:JewelryType">
+				<sequence>
+					<element name="sand_type" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="BeadsType">
+		<complexContent>
+			<extension base="tns:JewelryType">
+				<sequence>
+					<element name="length" type="double" />
+					<element name="thickness" type="double" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="CoulombType">
+		<complexContent>
+			<extension base="tns:JewelryType">
+				<sequence>
+					<element name="size" type="double" />
+					<element name="form" type="string" />
+					<element name="picture" type="boolean" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="CupType">
+		<complexContent>
+			<extension base="tns:JewelryType">
+				<sequence>
+					<element name="amount" type="double" />
+					<element name="height" type="double" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="JewelryType">
+		<sequence>
+			<element name="material" type="string" />
+			<element name="weight" type="double" />
+			<element name="price" type="double" />
+		</sequence>
+	</complexType>
+</schema>

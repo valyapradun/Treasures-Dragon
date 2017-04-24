@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.epam.com/training/Antique" 
+	xmlns:tns="http://www.epam.com/training/Antique" 
+	elementFormDefault="qualified"
+	attributeFormDefault="qualified">
+	
+	<complexType name="BookType">
+		<complexContent>
+			<extension base="tns:AntiqueType">
+				<sequence>
+					<element name="type" type="string" />
+					<element name="pages" type="int" />
+					<element name="lanquage" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="ScrollType">
+		<complexContent>
+			<extension base="tns:AntiqueType">
+				<sequence>
+					<element name="content" type="string" />
+					<element name="school_magic" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="FossilType">
+		<complexContent>
+			<extension base="tns:AntiqueType">
+				<sequence>
+					<element name="accessory" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="AntiqueType">
+		<sequence>
+			<element name="title" type="string" />
+			<element name="age" type="int" />
+			<element name="price" type="double" />
+		</sequence>
+	</complexType>
+	
+	
+	
+</schema>

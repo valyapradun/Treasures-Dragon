@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.epam.com/training/Subject" 
+	xmlns:tns="http://www.epam.com/training/Subject" 
+	elementFormDefault="qualified"
+	attributeFormDefault="qualified">
+	
+	<complexType name="CasketType">
+		<complexContent>
+			<extension base="tns:SubjectType">
+				<sequence>
+					<element name="weight" type="double" />
+					<element name="lock" type="boolean" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="KeyType">
+		<complexContent>
+			<extension base="tns:SubjectType">
+				<sequence>
+					<element name="type" type="string" />
+					<element name="open" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="DragonEggType">
+		<complexContent>
+			<extension base="tns:SubjectType">
+				<sequence>
+					<element name="type" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="SubjectType">
+		<sequence>
+			<element name="size" type="double" />
+			<element name="price" type="double" />
+		</sequence>
+	</complexType>
+	
+</schema>

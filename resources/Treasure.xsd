@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.epam.com/training/Treasure" 
+	xmlns:tns="http://www.epam.com/training/Treasure"
+	xmlns:c="http://www.epam.com/training/Clothes" 
+	xmlns:j="http://www.epam.com/training/Jewelry"
+	xmlns:w="http://www.epam.com/training/Weapon"
+	xmlns:a="http://www.epam.com/training/Antique"
+	xmlns:art="http://www.epam.com/training/Art"
+	xmlns:s="http://www.epam.com/training/Subject"
+	xmlns:m="http://www.epam.com/training/Magic"
+	xmlns:p="http://www.epam.com/training/Person"
+	elementFormDefault="qualified">
+	
+<import schemaLocation="Clothes.xsd" namespace="http://www.epam.com/training/Clothes" />
+<import schemaLocation="Jewelry.xsd" namespace="http://www.epam.com/training/Jewelry" />
+<import schemaLocation="Weapon.xsd" namespace="http://www.epam.com/training/Weapon" />
+<import schemaLocation="Antique.xsd" namespace="http://www.epam.com/training/Antique" />
+<import schemaLocation="Art.xsd" namespace="http://www.epam.com/training/Art" />
+<import schemaLocation="Subject.xsd" namespace="http://www.epam.com/training/Subject" />
+<import schemaLocation="Magic.xsd" namespace="http://www.epam.com/training/Magic" />
+<import schemaLocation="Person.xsd" namespace="http://www.epam.com/training/Person" />
+
+	<element name="treasures" type="tns:TreasuresType" />
+	
+	<complexType name="TreasuresType">
+		<sequence>
+			<element name="jewel" type="j:JewelType" minOccurs="1" maxOccurs="unbounded"></element>           			<!--  1. драг.камень -->
+			<element name="ring" type="j:RingType" minOccurs="1" maxOccurs="unbounded"></element>            			<!--  2. кольцо -->
+		 	<element name="bracelet" type="j:BraceletType" minOccurs="1" maxOccurs="unbounded"></element>     			<!--  3. браслет -->
+		 	<element name="chain" type="j:ChainType" minOccurs="1" maxOccurs="unbounded"></element>           			<!--  4. цепочка -->
+		 	<element name="sand_glass" type="j:SandGlassType" minOccurs="1" maxOccurs="unbounded"></element>           	<!--  5. песочные часы -->
+		 	<element name="beads" type="j:BeadsType" minOccurs="1" maxOccurs="unbounded"></element>           			<!--  6. бусы -->
+			<element name="coulomb" type="j:CoulombType" minOccurs="1" maxOccurs="unbounded"></element>       			<!--  7. кулон -->
+			<element name="cup" type="j:CupType" minOccurs="1" maxOccurs="unbounded"></element>       					<!--  8. кубок -->
+	
+			<element name="vase" type="art:VaseType" minOccurs="1" maxOccurs="unbounded"></element>       				<!--  9. ваза -->
+			<element name="statue" type="art:StatueType" minOccurs="1" maxOccurs="unbounded"></element>       			<!--  10. статуя -->
+			<element name="picture" type="art:PictureType" minOccurs="1" maxOccurs="unbounded"></element>       		<!--  11. картина -->
+			<element name="staff" type="art:StaffType" minOccurs="1" maxOccurs="unbounded"></element>       			<!--  15. посох -->
+	
+			<element name="casket" type="s:CasketType" minOccurs="1" maxOccurs="unbounded"></element>       			<!--  12. шкатулка -->
+			<element name="key" type="s:KeyType" minOccurs="1" maxOccurs="unbounded"></element>       					<!--  13. ключ -->
+			<element name="dragon_egg" type="s:DragonEggType" minOccurs="1" maxOccurs="unbounded"></element>       		<!--  29. драконье яйцо -->
+	
+		 	<element name="sword" type="w:SwordType" minOccurs="1" maxOccurs="unbounded"></element> 					<!--  14. меч -->
+			<element name="mace" type="w:MaceType" minOccurs="1" maxOccurs="unbounded"></element>          				<!--  16. булава -->
+			<element name="axe" type="w:AxeType" minOccurs="1" maxOccurs="unbounded"></element>							<!--  17. топор -->
+		 	<element name="bow" type="w:BowType" minOccurs="1" maxOccurs="unbounded"></element>							<!--  18. лук -->
+		
+			<element name="helmet" type="c:HelmetType" minOccurs="1" maxOccurs="unbounded"></element>           		<!--  19. шлем -->
+			<element name="spaulders" type="c:SpauldersType" minOccurs="1" maxOccurs="unbounded"></element>     		<!--  20. наплечники -->
+			<element name="armor" type="c:ArmorType" minOccurs="1" maxOccurs="unbounded"></element>				 		<!--  21. доспех -->
+			<element name="pants" type="c:PantsType" minOccurs="1" maxOccurs="unbounded"></element>						<!--  22. штаны -->
+			<element name="boots" type="c:BootsType" minOccurs="1" maxOccurs="unbounded"></element>						<!--  23. ботинки -->
+		
+			<element name="antique_book" type="a:BookType" minOccurs="1" maxOccurs="unbounded"></element>				<!--  24. древняя книга -->
+			<element name="antique_scroll" type="a:ScrollType" minOccurs="1" maxOccurs="unbounded"></element>			<!--  25. древний свиток -->
+			<element name="antique_fossil" type="a:FossilType" minOccurs="1" maxOccurs="unbounded"></element>			<!--  28. древняя окаменелость -->
+		
+			<element name="magic_stone" type="m:MagicStoneType" minOccurs="1" maxOccurs="unbounded"></element>			<!--  26. магический камень -->
+			<element name="runic_stone" type="m:RunicStoneType" minOccurs="1" maxOccurs="unbounded"></element>			<!--  27. рунический камень -->
+			<element name="ancient_fabric" type="m:AncientFabricType" minOccurs="1" maxOccurs="unbounded"></element>	<!--  30. древняя ткань -->
+			<element name="aroma" type="m:AromaType" minOccurs="1" maxOccurs="unbounded"></element>						<!--  31. благовония -->
+		
+			<element name="princess" type="p:PersonType" minOccurs="1" maxOccurs="unbounded"></element>					<!--  32. принцесса -->
+		</sequence>
+	</complexType>
+		
+</schema>

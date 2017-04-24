@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.epam.com/training/Magic" 
+	xmlns:tns="http://www.epam.com/training/Magic" 
+	elementFormDefault="qualified"
+	attributeFormDefault="qualified">
+	
+	<complexType name="MagicStoneType">
+		<complexContent>
+			<extension base="tns:MagicType">
+				<sequence>
+					<element name="age" type="int" />
+					<element name="magic_words" type="string" />
+					<element name="translation" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="RunicStoneType">
+		<complexContent>
+			<extension base="tns:MagicType">
+				<sequence>
+					<element name="runes_count" type="int" />
+					<element name="engraving" type="boolean" />
+					<element name="translation" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="AncientFabricType">
+		<complexContent>
+			<extension base="tns:MagicType">
+				<sequence>
+					<element name="size" type="double" />
+					<element name="material" type="string" />
+					<element name="ornament" type="boolean" />
+					<element name="ornament_type" type="string" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="AromaType">
+		<complexContent>
+			<extension base="tns:MagicType">
+				<sequence>
+					<element name="count" type="int" />
+				</sequence>
+				<attribute name="id" type="int" />
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="MagicType">
+		<sequence>
+			<element name="title" type="string" />
+			<element name="type" type="string" />
+			<element name="price" type="double" />
+		</sequence>
+	</complexType>
+
+</schema>
